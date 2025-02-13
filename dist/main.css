@@ -52,35 +52,35 @@ nav {
 /* === Настраиваем иконки для каждой кнопки === */
 /* Тут проблема с плавностью появления и отсутствием alt. Нужно еще подумать над реализацией */
 .description::before { 
-  background-image: url('../images/icon/description-white.svg'); 
+  background-image: url(866ad770300b884c4a19.svg); 
 }
 nav button:hover.description::before,
 nav button.active.description::before {
-  background-image: url('../images/icon/description-black.svg');
+  background-image: url(1b090a9199d66a7fa3a4.svg);
 }
-.checklist::before { background-image: url('../images/icon/checklist-white.svg'); }
+.checklist::before { background-image: url(8b938b307514ec41ec4a.svg); }
 
 nav button:hover.checklist::before,
 nav button.active.checklist::before {
-  background-image: url('../images/icon/checklist-black.svg');
+  background-image: url(776221ad24e382a0c2ec.svg);
 }
-.weekly::before { background-image: url('../images/icon/weekly-white.svg'); }
+.weekly::before { background-image: url(670c3bdb9f608138025a.svg); }
 
 nav button:hover.weekly::before,
 nav button.active.weekly::before {
-  background-image: url('../images/icon/weekly-black.svg');
+  background-image: url(e491f013e74881de86e9.svg);
 }
-.monthly::before { background-image: url('../images/icon/monthly-white.svg'); }
+.monthly::before { background-image: url(efb6f6eccb255d70a147.svg); }
 
 nav button:hover.monthly::before,
 nav button.active.monthly::before {
-  background-image: url('../images/icon/monthly-black.svg');
+  background-image: url(564766dc38c6bcca2095.svg);
 }
-.settings::before { background-image: url('../images/icon/settings-white.svg'); }
+.settings::before { background-image: url(6f345c823c7d9d3f38f7.svg); }
 
 nav button:hover.settings::before,
 nav button.active.settings::before {
-  background-image: url('../images/icon/settings-black.svg');
+  background-image: url(94db046ec5fa0f7f8f0a.svg);
 }
 
 
@@ -104,15 +104,16 @@ main {
   width: 100vw;
 }
 
-main section {
+.main-content {
   width: 83vw;
+  height: 1400px;
   margin: 20px 5px;
   background: var(--main-color, #ffffff);
   align-self: center;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  background-image: url("../images/cover-image-light.png");
+  background-image: url(6f0aae5942a3c669cfba.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -139,3 +140,18 @@ main section {
 }
 
 }
+:root {
+  --bg-color: #F8ECE0;
+  --main-color: #ffffff;
+  --accent-color: #1E252D;
+  --accent-text: #000000;
+  --intro-color: #444444;
+
+  --button-gradient: linear-gradient(135deg, #E2E3E8, #C4C4C4);
+  --button-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  --contain-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  --main-font: 'Inter', sans-serif;
+}
+
+

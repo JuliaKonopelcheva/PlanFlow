@@ -1,0 +1,1 @@
+document.querySelector("main").innerHTML="\n      <h2>Еженедельник</h2>\n      <p>Здесь будет ваш недельный план.</p>\n  ";

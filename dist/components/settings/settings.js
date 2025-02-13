@@ -1,0 +1,1 @@
+document.querySelector("main").innerHTML='\n      <h2>Настройки</h2>\n      <label>\n          <input type="checkbox" id="dark-mode"> Темный режим\n      </label>\n  ',document.getElementById("dark-mode").addEventListener("change",(function(){document.body.classList.toggle("dark")}));
