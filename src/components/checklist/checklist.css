@@ -1,16 +1,4 @@
-/* === 1. Глобальные стили === */
-
-/* Обнуляем отступы и включаем box-sizing для всех элементов */
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Базовые стили */
-body {
+.checklist-container {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -20,31 +8,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Анимация появления элементов (scale + fade-in) */
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Анимация исчезновения элементов (shrink + fade-out) */
-@keyframes fadeOutShrink {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-}
-
-/* === 2. Контейнер для формы добавления задачи === */
+/* ===  Контейнер для формы добавления задачи === */
 .task__add {
   display: grid;
   justify-items: center;
@@ -62,12 +26,12 @@ body {
 
 /* Поле ввода */
 .task-iput {
-  width: clamp(350px, 50vw, 600px);
+  width: clamp(350px, 70vw, 800px);
 }
 
 input, select {
   padding: 10px;
-  border: 2px solid #5181b5;
+  border: 2px solid var(  --accent-color, #1E252D);
   border-radius: 5px;
   outline: none;
   transition: border 0.3s;
@@ -76,16 +40,16 @@ input, select {
 /* === Градиентная анимация для border при фокусе === */
 @keyframes gradientBorder {
   0% {
-    border-color: #5181b5;
+    border-color: #1E252D;
   }
   33% {
-    border-color: #aebeed; /* Оранжевый */
+    border-color: #8c95ad; /* Оранжевый */
   }
   66% {
-    border-color: #7e91ba; /* Розовый */
+    border-color: #a9bade; /* Розовый */
   }
   100% {
-    border-color: #5181b5;
+    border-color: #1E252D;
   }
 }
 
@@ -95,12 +59,12 @@ input:focus, select:focus {
   border-width: 2px;
 }
 
-/* === 3. Кнопки === */
+/* ===  Кнопки === */
 button {
   padding: 10px 15px;
   border-radius: 5px;
   border: none;
-  background-color: #5181b5;
+  background-color: #1E252D;
   color: white;
   cursor: pointer;
   transition: background 0.3s, transform 0.1s;
@@ -111,7 +75,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* === 4. Список задач === */
+/* ===  Список задач === */
 ul {
   padding: 0;
   width: clamp(350px, 50vw, 600px);
@@ -164,7 +128,7 @@ li.removing {
 }
 
 
-/* === 5. Кнопка удаления === */
+/* ===  Кнопка удаления === */
 .delete-btn {
   background-color: rgba(248, 15, 15, 0.9);
   color: white;
@@ -178,8 +142,8 @@ li.removing {
   transform: scale(1.1);
 }
 
-/* === 6. Темная тема === */
-.dark-mode {
+/* ===  Темная тема Исправить === */ 
+/* .dark-mode {
   background: #222;
   color: white;
 }
@@ -198,7 +162,7 @@ li.removing {
 
 .dark-mode .delete-btn:hover {
   background-color: #000000;
-}
+} */
 
 
 
@@ -221,8 +185,14 @@ li.removing {
 }
 
 
+@media (max-width: 740px) {
+  .delete-btn {
+    width: 100%;
+  }
+}
 
-/* === 7. Адаптация для мобильных экранов (≤ 450px) === */
+
+/* ===  Адаптация для мобильных экранов (≤ 450px) === */
 @media (max-width: 450px) {
   .task__add-settings {
     flex-direction: column;
@@ -236,5 +206,31 @@ li.removing {
 
   .task-text { 
     min-width: max-content;
+  }
+}
+
+
+
+/* Анимация появления элементов (scale + fade-in) */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Анимация исчезновения элементов (shrink + fade-out) */
+@keyframes fadeOutShrink {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
   }
 }

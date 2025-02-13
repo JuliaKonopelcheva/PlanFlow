@@ -3,6 +3,7 @@ import './styles/style.css';
 import './styles/variables.css';
 import './styles/dark.css';
 import './styles/light.css';
+import './components/checklist/checklist.css';
 
 
 
@@ -61,6 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Устанавливаем начальную активную вкладку (Описание)
-  changeTab(document.querySelector(".tab[data-tab='description']"));
+  changeTab(document.querySelector(".tab[data-tab='checklist']"));
 });
 

@@ -3,8 +3,7 @@
 
     main.innerHTML = `
         <section class="checklist-container">
-            <h2>📋 To-Do List</h2>
-
+            <!-- <h2>To-Do List</h2>    Исправить --!>
             <!-- Форма для добавления задач -->
             <div class="task__add">
                 <div class="task__add-input">
@@ -63,10 +62,10 @@
 
     // 📌 Цвета для категорий
     const categoryColors = {
-        "Работа": "#FAEBEB",
-        "Учёба": "#F9FACA",
-        "Личное": "#E4EFFA",
-        "Ежедневно": "#EDFADE"
+        "Работа": "#E8DDD2",
+        "Учёба": "#FFF3E6",
+        "Личное": "#C4C4C4",
+        "Ежедневно": "#E7F3FF"
     };
 
     // 📌 Функция добавления задачи
@@ -187,6 +186,14 @@
             li.style.display = matchesFilter && matchesCategory ? "flex" : "none";
         });
     }
+
+    // 📌 Очистить все задачи
+clearAllBtn.addEventListener("click", function () {
+    if (confirm("Вы уверены, что хотите удалить все задачи?")) {
+        taskList.innerHTML = "";
+        localStorage.removeItem("tasks");
+    }
+});
 
     clearAllBtn.addEventListener("click", () => taskList.innerHTML = "");
     addTaskBtn.addEventListener("click", addTask);
