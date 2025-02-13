@@ -1,0 +1,13 @@
+:root {
+  --bg-color: #F8ECE0;
+  --main-color: #ffffff;
+  --accent-color: #1E252D;
+  --accent-text: #000000;
+  --intro-color: #444444;
+
+  --button-gradient: linear-gradient(135deg, #E2E3E8, #C4C4C4);
+  --button-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  --contain-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  --main-font: 'Inter', sans-serif;
+}

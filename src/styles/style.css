@@ -1,0 +1,142 @@
+/* === ОБЩИЕ СТИЛИ === */
+body {
+  font-family: var(--main-font, 'Inter', sans-serif);
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color, #F8ECE0);
+  color: var(--accent-color, #1E252D);
+  line-height: 1.6;
+}
+
+/* === ХЕДЕР === */
+header {
+  background: var(--accent-color, #1E252D);
+  color: var(--main-color, #ffffff);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* === НАВИГАЦИЯ === */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: transparent;
+  color: var(--main-color, #ffffff);
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+  box-shadow: var(--button-shadow, 0 3px 6px rgba(0, 0, 0, 0.2));
+  position: relative;
+}
+
+.tab::before {
+  content: "";
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* === Настраиваем иконки для каждой кнопки === */
+/* Тут проблема с плавностью появления и отсутствием alt. Нужно еще подумать над реализацией */
+.description::before { 
+  background-image: url('../images/icon/description-white.svg'); 
+}
+nav button:hover.description::before,
+nav button.active.description::before {
+  background-image: url('../images/icon/description-black.svg');
+}
+.checklist::before { background-image: url('../images/icon/checklist-white.svg'); }
+
+nav button:hover.checklist::before,
+nav button.active.checklist::before {
+  background-image: url('../images/icon/checklist-black.svg');
+}
+.weekly::before { background-image: url('../images/icon/weekly-white.svg'); }
+
+nav button:hover.weekly::before,
+nav button.active.weekly::before {
+  background-image: url('../images/icon/weekly-black.svg');
+}
+.monthly::before { background-image: url('../images/icon/monthly-white.svg'); }
+
+nav button:hover.monthly::before,
+nav button.active.monthly::before {
+  background-image: url('../images/icon/monthly-black.svg');
+}
+.settings::before { background-image: url('../images/icon/settings-white.svg'); }
+
+nav button:hover.settings::before,
+nav button.active.settings::before {
+  background-image: url('../images/icon/settings-black.svg');
+}
+
+
+
+nav button:hover {
+  background: var(--main-color, #ffffff);
+  color: var(--accent-text, #000000);
+  transform: scale(1.05);
+}
+
+nav button.active {
+  background: var(--main-color, #ffffff);
+  color: var(--accent-text, #000000);
+  cursor: default;
+}
+
+/* === ОСНОВНОЙ КОНТЕНТ === */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.main-content {
+  width: 83vw;
+  height: 1400px;
+  margin: 20px 5px;
+  background: var(--main-color, #ffffff);
+  align-self: center;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-image: url("../images/cover-image-light.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 686px) {
+  .tab {
+    width: 70px;
+    height: 50px;
+    padding: 0;
+    font-size: 0; /* Скрываем текст */
+}
+
+.tab::before {
+  display: inline-block;
+}
+
+}
+
+@media (max-width: 475px) {
+  .tab {
+    width: 50px;
+    height: 50px;
+}
+
+}
